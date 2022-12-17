@@ -1,0 +1,70 @@
+body{
+    background-color: rgba(40, 38, 38, 0.662);
+    background-size:cover
+}
+
+h1{
+    color: aliceblue;
+}
+
+fieldset{
+    width: fit-content;
+    border-color: yellow;
+    border-width: 5px;
+}
+
+legend{
+    background-color: yellow;
+    color: black;
+    padding: 5px;
+}
+
+select{
+    height: 26px;
+    color: black;
+    background-color: transparent;
+    border-color: aliceblue;
+    
+}
+
+label{
+    color: aliceblue;
+}
+
+input{
+    height: 20px;
+    color: aliceblue;
+    background-color: transparent;
+    border-color: aliceblue;
+}
+
+.blueTable{
+    color: aliceblue;
+    background-color: rgb(24, 101, 215);
+}
+
+td{
+    text-align: center;
+    height: 50px;
+    width: 100px;
+}
+
+button{
+    border-color: transparent;
+    color: aliceblue;
+    background-color: rgba(7, 137, 250, 0.717);
+    width: 277px;
+    height: 50px;
+    font-size: large;
+}
+
+
+
+
+
+
+
+
+
+
+
