@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Basketball Statistics</title>
+        <link rel="stylesheet" href="Basketball Statistics.css" />
+        <script src="Basketball Statistics.js"></script>
+    </head>
+    <body>
+        <h1>Scoring Table</h1>
+
+        <div>
+            <fieldset>
+                <legend>Player Infermation</legend>
+                <form>
+                    <table>
+                        <tr>
+                            <th><label for="inputPlayerName1">Input Player Name</label></th>
+                            <th><label for="inputPlayerPosition1">Choose Player Position</label></th>
+                            <th><label for="inputPlayerNumber1">Input Player Number</label></th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="inputPlayerName1" class="input" /></td>
+                            <td>
+                                <select id="inputPlayerPosition1" class="select">
+                                    <option value="Point Guard">Point Guard</option>
+                                    <option value="Shooting Guard">Shooting Guard</option>
+                                    <option value="Small Forward">Small Forward</option>
+                                    <option value="Power Forward">Power Forward</option>
+                                    <option value="Center">Center</option>
+                                </select>
+                            </td>
+                            <td><input type="text" id="inputPlayerNumber1" class="input" /></td>
+                            <td><input type="button" onclick="submitInformation1()" value="Input Player Information" /></td>
+                        </tr>
+                    </table>
+                </form>
+            </fieldset>
+            <table class="blueTable">
+                <tr>
+                    <th>Player Name</th>
+                    <th>Player Position</th>
+                    <th>Player Number</th>
+                    <th>Score</th>
+                    <th>Rebound</th>
+                    <th>Assist</th>
+                    <th>Steal</th>
+                    <th>Block</th>
+                    <th>Turnover</th>
+                    <th>Field Goal</th>
+                    <th>Three-point Shot</th>
+                    <th>Free throw</th>
+                    <th>Field Goal Percentage</th>
+                    <th>Three-point Shot Percentage</th>
+                    <th>Free Throw Percentage</th>
+                    <th>Front Court Rebound</th>
+                    <th>Back Court Rebound</th>
+                </tr>
+                <tr>
+                    <td id="playerName1"></td>
+                    <td id="playerPosition1"></td>
+                    <td id="playerNumber1"></td>
+                    <td id="score1">0</td>
+                    <td id="rebound1">0</td>
+                    <td id="assist1">0</td>
+                    <td id="steal1">0</td>
+                    <td id="block1">0</td>
+                    <td id="turnover1">0</td>
+                    <td id="fieldGoal1">0/0</td>
+                    <td id="threePointShot1">0/0</td>
+                    <td id="freeThrow1">0/0</td>
+                    <td id="fieldGoalPercentage1">0</td>
+                    <td id="threePointShotPercentage1">0</td>
+                    <td id="freeThrowPercentage1">0</td>
+                    <td id="frontCourtRebound1">0</td>
+                    <td id="backCourtRebound1">0</td>
+                </tr>
+            </table>
+            <table class="yellowTable">
+                <tr>
+                    <td><button onclick="twoPointHit1()">Two-point Hit</button></td>
+                    <td><button onclick="threePointHit1()">Three-point Hit</button></td>
+                    <td><button onclick="freeThrowHit1()">Free Throw Hit</button></td>
+                    <td><button onclick="frontCourtRebound1()">Front Court Rebound</button></td>
+                    <td><button onclick="addAssist1()">Assist</button></td>
+                    <td><button onclick="addBlock1()">Block</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="twoPointMiss1()">Two-point Miss</button></td>
+                    <td><button onclick="threePointMiss1()">Three-point Miss</button></td>
+                    <td><button onclick="freeThrowMiss1()">Free Throw Miss</button></td>
+                    <td><button onclick="backCourtRebound1()">Back Court Rebound</button></td>
+                    <td><button onclick="addSteal1()">Steal</button></td>
+                    <td><button onclick="addTurnover1()">Turnover</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Player Infermation</legend>
+                <form>
+                    <table>
+                        <tr>
+                            <th><label for="inputPlayerName2">Input Player Name</label></th>
+                            <th><label for="inputPlayerPosition2">Choose Player Position</label></th>
+                            <th><label for="inputPlayerNumber2">Input Player Number</label></th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="inputPlayerName2" class="input" /></td>
+                            <td>
+                                <select id="inputPlayerPosition2" class="select">
+                                    <option value="Point Guard">Point Guard</option>
+                                    <option value="Shooting Guard">Shooting Guard</option>
+                                    <option value="Small Forward">Small Forward</option>
+                                    <option value="Power Forward">Power Forward</option>
+                                    <option value="Center">Center</option>
+                                </select>
+                            </td>
+                            <td><input type="text" id="inputPlayerNumber2" class="input" /></td>
+                            <td><input type="button" onclick="submitInformation2()" value="Input Player Information" /></td>
+                        </tr>
+                    </table>
+                </form>
+            </fieldset>
+            <table class="blueTable">
+                <tr>
+                    <th>Player Name</th>
+                    <th>Player Position</th>
+                    <th>Player Number</th>
+                    <th>Score</th>
+                    <th>Rebound</th>
+                    <th>Assist</th>
+                    <th>Steal</th>
+                    <th>Block</th>
+                    <th>Turnover</th>
+                    <th>Field Goal</th>
+                    <th>Three-point Shot</th>
+                    <th>Free throw</th>
+                    <th>Field Goal Percentage</th>
+                    <th>Three-point Shot Percentage</th>
+                    <th>Free Throw Percentage</th>
+                    <th>Front Court Rebound</th>
+                    <th>Back Court Rebound</th>
+                </tr>
+                <tr>
+                    <td id="playerName2"></td>
+                    <td id="playerPosition2"></td>
+                    <td id="playerNumber2"></td>
+                    <td id="score2">0</td>
+                    <td id="rebound2">0</td>
+                    <td id="assist2">0</td>
+                    <td id="steal2">0</td>
+                    <td id="block2">0</td>
+                    <td id="turnover2">0</td>
+                    <td id="fieldGoal2">0/0</td>
+                    <td id="threePointShot2">0/0</td>
+                    <td id="freeThrow2">0/0</td>
+                    <td id="fieldGoalPercentage2">0</td>
+                    <td id="threePointShotPercentage2">0</td>
+                    <td id="freeThrowPercentage2">0</td>
+                    <td id="frontCourtRebound2">0</td>
+                    <td id="backCourtRebound2">0</td>
+                </tr>
+            </table>
+            <table class="yellowTable">
+                <tr>
+                    <td><button onclick="twoPointHit2()">Two-point Hit</button></td>
+                    <td><button onclick="threePointHit2()">Three-point Hit</button></td>
+                    <td><button onclick="freeThrowHit2()">Free Throw Hit</button></td>
+                    <td><button onclick="frontCourtRebound2()">Front Court Rebound</button></td>
+                    <td><button onclick="addAssist2()">Assist</button></td>
+                    <td><button onclick="addBlock2()">Block</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="twoPointMiss2()">Two-point Miss</button></td>
+                    <td><button onclick="threePointMiss2()">Three-point Miss</button></td>
+                    <td><button onclick="freeThrowMiss2()">Free Throw Miss</button></td>
+                    <td><button onclick="backCourtRebound2()">Back Court Rebound</button></td>
+                    <td><button onclick="addSteal2()">Steal</button></td>
+                    <td><button onclick="addTurnover2()">Turnover</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Player Infermation</legend>
+                <form>
+                    <table>
+                        <tr>
+                            <th><label for="inputPlayerName3">Input Player Name</label></th>
+                            <th><label for="inputPlayerPosition3">Choose Player Position</label></th>
+                            <th><label for="inputPlayerNumber3">Input Player Number</label></th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="inputPlayerName3" class="input" /></td>
+                            <td>
+                                <select id="inputPlayerPosition3" class="select">
+                                    <option value="Point Guard">Point Guard</option>
+                                    <option value="Shooting Guard">Shooting Guard</option>
+                                    <option value="Small Forward">Small Forward</option>
+                                    <option value="Power Forward">Power Forward</option>
+                                    <option value="Center">Center</option>
+                                </select>
+                            </td>
+                            <td><input type="text" id="inputPlayerNumber3" class="input" /></td>
+                            <td><input type="button" onclick="submitInformation3()" value="Input Player Information" /></td>
+                        </tr>
+                    </table>
+                </form>
+            </fieldset>
+            <table class="blueTable">
+                <tr>
+                    <th>Player Name</th>
+                    <th>Player Position</th>
+                    <th>Player Number</th>
+                    <th>Score</th>
+                    <th>Rebound</th>
+                    <th>Assist</th>
+                    <th>Steal</th>
+                    <th>Block</th>
+                    <th>Turnover</th>
+                    <th>Field Goal</th>
+                    <th>Three-point Shot</th>
+                    <th>Free throw</th>
+                    <th>Field Goal Percentage</th>
+                    <th>Three-point Shot Percentage</th>
+                    <th>Free Throw Percentage</th>
+                    <th>Front Court Rebound</th>
+                    <th>Back Court Rebound</th>
+                </tr>
+                <tr>
+                    <td id="playerName3"></td>
+                    <td id="playerPosition3"></td>
+                    <td id="playerNumber3"></td>
+                    <td id="score3">0</td>
+                    <td id="rebound3">0</td>
+                    <td id="assist3">0</td>
+                    <td id="steal3">0</td>
+                    <td id="block3">0</td>
+                    <td id="turnover3">0</td>
+                    <td id="fieldGoal3">0/0</td>
+                    <td id="threePointShot3">0/0</td>
+                    <td id="freeThrow3">0/0</td>
+                    <td id="fieldGoalPercentage3">0</td>
+                    <td id="threePointShotPercentage3">0</td>
+                    <td id="freeThrowPercentage3">0</td>
+                    <td id="frontCourtRebound3">0</td>
+                    <td id="backCourtRebound3">0</td>
+                </tr>
+            </table>
+            <table class="yellowTable">
+                <tr>
+                    <td><button onclick="twoPointHit3()">Two-point Hit</button></td>
+                    <td><button onclick="threePointHit3()">Three-point Hit</button></td>
+                    <td><button onclick="freeThrowHit3()">Free Throw Hit</button></td>
+                    <td><button onclick="frontCourtRebound3()">Front Court Rebound</button></td>
+                    <td><button onclick="addAssist3()">Assist</button></td>
+                    <td><button onclick="addBlock3()">Block</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="twoPointMiss3()">Two-point Miss</button></td>
+                    <td><button onclick="threePointMiss3()">Three-point Miss</button></td>
+                    <td><button onclick="freeThrowMiss3()">Free Throw Miss</button></td>
+                    <td><button onclick="backCourtRebound3()">Back Court Rebound</button></td>
+                    <td><button onclick="addSteal3()">Steal</button></td>
+                    <td><button onclick="addTurnover3()">Turnover</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Player Infermation</legend>
+                <form>
+                    <table>
+                        <tr>
+                            <th><label for="inputPlayerName4">Input Player Name</label></th>
+                            <th><label for="inputPlayerPosition4">Choose Player Position</label></th>
+                            <th><label for="inputPlayerNumber4">Input Player Number</label></th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="inputPlayerName4" class="input" /></td>
+                            <td>
+                                <select id="inputPlayerPosition4" class="select">
+                                    <option value="Point Guard">Point Guard</option>
+                                    <option value="Shooting Guard">Shooting Guard</option>
+                                    <option value="Small Forward">Small Forward</option>
+                                    <option value="Power Forward">Power Forward</option>
+                                    <option value="Center">Center</option>
+                                </select>
+                            </td>
+                            <td><input type="text" id="inputPlayerNumber4" class="input" /></td>
+                            <td><input type="button" onclick="submitInformation4()" value="Input Player Information" /></td>
+                        </tr>
+                    </table>
+                </form>
+            </fieldset>
+            <table class="blueTable">
+                <tr>
+                    <th>Player Name</th>
+                    <th>Player Position</th>
+                    <th>Player Number</th>
+                    <th>Score</th>
+                    <th>Rebound</th>
+                    <th>Assist</th>
+                    <th>Steal</th>
+                    <th>Block</th>
+                    <th>Turnover</th>
+                    <th>Field Goal</th>
+                    <th>Three-point Shot</th>
+                    <th>Free throw</th>
+                    <th>Field Goal Percentage</th>
+                    <th>Three-point Shot Percentage</th>
+                    <th>Free Throw Percentage</th>
+                    <th>Front Court Rebound</th>
+                    <th>Back Court Rebound</th>
+                </tr>
+                <tr>
+                    <td id="playerName4"></td>
+                    <td id="playerPosition4"></td>
+                    <td id="playerNumber4"></td>
+                    <td id="score4">0</td>
+                    <td id="rebound4">0</td>
+                    <td id="assist4">0</td>
+                    <td id="steal4">0</td>
+                    <td id="block4">0</td>
+                    <td id="turnover4">0</td>
+                    <td id="fieldGoal4">0/0</td>
+                    <td id="threePointShot4">0/0</td>
+                    <td id="freeThrow4">0/0</td>
+                    <td id="fieldGoalPercentage4">0</td>
+                    <td id="threePointShotPercentage4">0</td>
+                    <td id="freeThrowPercentage4">0</td>
+                    <td id="frontCourtRebound4">0</td>
+                    <td id="backCourtRebound4">0</td>
+                </tr>
+            </table>
+            <table class="yellowTable">
+                <tr>
+                    <td><button onclick="twoPointHit4()">Two-point Hit</button></td>
+                    <td><button onclick="threePointHit4()">Three-point Hit</button></td>
+                    <td><button onclick="freeThrowHit4()">Free Throw Hit</button></td>
+                    <td><button onclick="frontCourtRebound4()">Front Court Rebound</button></td>
+                    <td><button onclick="addAssist4()">Assist</button></td>
+                    <td><button onclick="addBlock4()">Block</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="twoPointMiss4()">Two-point Miss</button></td>
+                    <td><button onclick="threePointMiss4()">Three-point Miss</button></td>
+                    <td><button onclick="freeThrowMiss4()">Free Throw Miss</button></td>
+                    <td><button onclick="backCourtRebound4()">Back Court Rebound</button></td>
+                    <td><button onclick="addSteal4()">Steal</button></td>
+                    <td><button onclick="addTurnover4()">Turnover</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Player Infermation</legend>
+                <form>
+                    <table>
+                        <tr>
+                            <th><label for="inputPlayerName5">Input Player Name</label></th>
+                            <th><label for="inputPlayerPosition5">Choose Player Position</label></th>
+                            <th><label for="inputPlayerNumber5">Input Player Number</label></th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="inputPlayerName5" class="input" /></td>
+                            <td>
+                                <select id="inputPlayerPosition5" class="select">
+                                    <option value="Point Guard">Point Guard</option>
+                                    <option value="Shooting Guard">Shooting Guard</option>
+                                    <option value="Small Forward">Small Forward</option>
+                                    <option value="Power Forward">Power Forward</option>
+                                    <option value="Center">Center</option>
+                                </select>
+                            </td>
+                            <td><input type="text" id="inputPlayerNumber5" class="input" /></td>
+                            <td><input type="button" onclick="submitInformation5()" value="Input Player Information" /></td>
+                        </tr>
+                    </table>
+                </form>
+            </fieldset>
+            <table class="blueTable">
+                <tr>
+                    <th>Player Name</th>
+                    <th>Player Position</th>
+                    <th>Player Number</th>
+                    <th>Score</th>
+                    <th>Rebound</th>
+                    <th>Assist</th>
+                    <th>Steal</th>
+                    <th>Block</th>
+                    <th>Turnover</th>
+                    <th>Field Goal</th>
+                    <th>Three-point Shot</th>
+                    <th>Free throw</th>
+                    <th>Field Goal Percentage</th>
+                    <th>Three-point Shot Percentage</th>
+                    <th>Free Throw Percentage</th>
+                    <th>Front Court Rebound</th>
+                    <th>Back Court Rebound</th>
+                </tr>
+                <tr>
+                    <td id="playerName5"></td>
+                    <td id="playerPosition5"></td>
+                    <td id="playerNumber5"></td>
+                    <td id="score5">0</td>
+                    <td id="rebound5">0</td>
+                    <td id="assist5">0</td>
+                    <td id="steal5">0</td>
+                    <td id="block5">0</td>
+                    <td id="turnover5">0</td>
+                    <td id="fieldGoal5">0/0</td>
+                    <td id="threePointShot5">0/0</td>
+                    <td id="freeThrow5">0/0</td>
+                    <td id="fieldGoalPercentage5">0</td>
+                    <td id="threePointShotPercentage5">0</td>
+                    <td id="freeThrowPercentage5">0</td>
+                    <td id="frontCourtRebound5">0</td>
+                    <td id="backCourtRebound5">0</td>
+                </tr>
+            </table>
+            <table class="yellowTable">
+                <tr>
+                    <td><button onclick="twoPointHit5()">Two-point Hit</button></td>
+                    <td><button onclick="threePointHit5()">Three-point Hit</button></td>
+                    <td><button onclick="freeThrowHit5()">Free Throw Hit</button></td>
+                    <td><button onclick="frontCourtRebound5()">Front Court Rebound</button></td>
+                    <td><button onclick="addAssist5()">Assist</button></td>
+                    <td><button onclick="addBlock5()">Block</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="twoPointMiss5()">Two-point Miss</button></td>
+                    <td><button onclick="threePointMiss5()">Three-point Miss</button></td>
+                    <td><button onclick="freeThrowMiss5()">Free Throw Miss</button></td>
+                    <td><button onclick="backCourtRebound5()">Back Court Rebound</button></td>
+                    <td><button onclick="addSteal5()">Steal</button></td>
+                    <td><button onclick="addTurnover5()">Turnover</button></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
